@@ -3,11 +3,18 @@ import { shopifyConfig } from '../../../config/shopify';
 const Shopify = require('shopify-api-node');
 
 export default class ProductCreatorService {
+  /**
+   * @param {Object} config
+   */
   constructor(config = shopifyConfig) {
     this.config = config;
   }
 
-  async call(product){
+  /**
+   * @param {Object} product
+   * @returns {Object} createdProduct
+   */
+  async call(product) {
     try {
       // TODO: this below should be implemented as DI and Singleton
       // using awilix f.e.
@@ -25,14 +32,18 @@ export default class ProductCreatorService {
     }
   }
 
-  /** @private */
-  getProductParams(product){
+  /**
+   * @param {Object} product
+   * @return {Object}
+   * @private
+   * */
+  getProductParams(product) {
     return {
       title: product.name,
       variants: [{
         price: product.price,
         inventory_quantity: product.quantity,
-      }]
+      }],
     };
   }
 }

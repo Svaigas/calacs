@@ -43,6 +43,6 @@ $> npm test
 | Integration Diagram      | yes     |
 | Services to Shopify      | yes     |
 | Tests      | no     |
-| Swagger documentation      | no     |
-| Joi Validator      | no     |
+| Swagger documentation      | yes     |
+| Joi Validator      | yes     |
 | Code documentation / jsdoc      | no     |

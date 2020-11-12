@@ -3,10 +3,16 @@ import { shopifyConfig } from '../../../config/shopify';
 const Shopify = require('shopify-api-node');
 
 export default class ProductsFetcherService {
+  /**
+   * @param {Object} config
+   */
   constructor(config = shopifyConfig) {
     this.config = config;
   }
 
+  /**
+   * @returns {Array.<Object>} createdProduct
+   */
   async call() {
     try {
       // TODO: this below should be implemented as DI and Singleton
