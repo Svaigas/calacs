@@ -4,6 +4,6 @@ import routes from './modules/routes';
 const app = express();
 
 // Add routes
-routes.articlesRoutes(app);
+routes.productsRoutes(app);
 
 module.exports = app;

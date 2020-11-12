@@ -1,3 +1,3 @@
-import articlesRoutes from './articles/routes';
+import productsRoutes from './products/routes';
 
-export default { articlesRoutes };
+export default { productsRoutes };
