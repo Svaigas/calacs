@@ -16,7 +16,6 @@ export default class ProductCreatorService {
         apiKey: this.config.apiKey,
         password: this.config.password,
       });
-
       const createdProduct = await shopify.product.create(this.getProductParams(product));
 
       return createdProduct;
@@ -29,7 +28,11 @@ export default class ProductCreatorService {
   /** @private */
   getProductParams(product){
     return {
-      name: product.title,
+      title: product.name,
+      variants: [{
+        price: product.price,
+        inventory_quantity: product.quantity,
+      }]
     };
   }
 }

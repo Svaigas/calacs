@@ -3,6 +3,9 @@ import AsyncHandler from '../../utils/async-handler';
 import ProductsController from './controllers/products.controller';
 
 const publicRoutes = express.Router();
+const validator = require('express-joi-validation').createValidator({});
+
+import { productSchemaValidator } from './validators/product-schema.validator';
 
 publicRoutes.get(
   '/',
@@ -11,6 +14,7 @@ publicRoutes.get(
 
 publicRoutes.post(
     '/',
+    validator.body(productSchemaValidator),
     AsyncHandler.wrap(ProductsController.create),
 );
 

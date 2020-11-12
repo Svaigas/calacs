@@ -17,6 +17,8 @@ $> npm start
 
 Once application start there is possibility to check if is up and running:
 ```
+Hello:
+http://localhost:3000/hello
 Swagger Docs: 
 http://localhost:3000/api/v1/api-docs/
 ```
@@ -44,9 +46,3 @@ $> npm test
 | Swagger documentation      | no     |
 | Joi Validator      | no     |
 | Code documentation / jsdoc      | no     |
-
-### TODO 
-* Add Tests
-* Add Swagger Documentation
-* Add Joi Validator
-* Add code documentation / jsdoc

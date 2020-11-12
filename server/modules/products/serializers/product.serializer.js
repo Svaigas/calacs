@@ -9,7 +9,7 @@ export default class ProductSerializer {
   call() {
     return {
       id: this.product.id,
-      imageURL: this.product.image.src,
+      image: this.product.image,
       name: this.product.title,
       variants: _.map(this.product.variants, (variant) => new ProductVariantSerializer(variant).call()),
     };
