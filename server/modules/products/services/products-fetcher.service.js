@@ -9,15 +9,19 @@ export default class ProductsFetcherService {
 
   async call() {
     try {
+      // TODO: this below should be implemented as DI and Singleton
+      // using awilix f.e.
       const shopify = new Shopify({
         shopName: this.config.shopName,
         apiKey: this.config.apiKey,
         password: this.config.password,
       });
-      const results = await shopify.product.list({ limit: 5 });
+      const results = await shopify.product.list();
+
       return results;
     } catch (e) {
-
+      // TODO: logger should be implemented
+      console.log(e);
     }
   }
 }

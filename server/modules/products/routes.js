@@ -11,7 +11,7 @@ publicRoutes.get(
 
 publicRoutes.post(
     '/',
-    AsyncHandler.wrap(ProductsController.doNothing),
+    AsyncHandler.wrap(ProductsController.create),
 );
 
 publicRoutes.get(

@@ -15,9 +15,10 @@ export default class ProductsController {
     );
   }
 
-  static async create(req, res) {
-    const product = new ProductCreatorService().call();
-    res.json({});
+  static async create({ body }, res) {
+    const product = await new ProductCreatorService().call(body);
+
+    res.json(new ProductSerializer(product));
   }
 
   static async doNothing(req, res) {
