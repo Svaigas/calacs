@@ -1,3 +1,3 @@
-import articlesRoutes from 'modules/articles/routes';
+import articlesRoutes from './articles/routes';
 
 export default { articlesRoutes };
