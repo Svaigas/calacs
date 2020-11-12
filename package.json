@@ -1,0 +1,32 @@
+{
+  "name": "calacs",
+  "version": "1.0.0",
+  "description": "Calacs shopify integration",
+  "main": "bin/main.js",
+  "scripts": {
+    "start": "NODE_ICU_DATA=node_modules/full-icu node -r esm ./bin/main.js",
+    "start:dev": "NODE_ICU_DATA=node_modules/full-icu nodemon -r esm ./bin/main.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Svaigas/calacs.git"
+  },
+  "author": "Mateusz Adamiec Svaigas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Svaigas/calacs/issues"
+  },
+  "homepage": "https://github.com/Svaigas/calacs#readme",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.13.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "full-icu": "^1.3.1",
+    "http": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
