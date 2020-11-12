@@ -8,7 +8,8 @@
     "lint:fix": "eslint \"./server/**/*.js\" --fix",
     "start": "NODE_ICU_DATA=node_modules/full-icu node -r esm ./bin/main.js",
     "start:dev": "NODE_ICU_DATA=node_modules/full-icu nodemon -r esm ./bin/main.js",
-    "test": "test"
+    "test:e2e": "NODE_ICU_DATA=node_modules/full-icu NODE_PATH=./server ./node_modules/.bin/mocha --require esm --recursive --exit ./server/**/*.test.js",
+    "test:unit": "NODE_ICU_DATA=node_modules/full-icu NODE_PATH=./server ./node_modules/.bin/mocha --require esm --recursive --exit ./server/**/*.unit-test.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
   "homepage": "https://github.com/Svaigas/calacs#readme",
   "dependencies": {
     "app-module-path": "^2.2.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "chalk": "^4.1.0",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
@@ -32,8 +35,10 @@
     "http-status-codes": "^2.1.4",
     "joi": "^17.3.0",
     "lodash": "^4.17.20",
+    "mocha": "^8.2.1",
     "path": "^0.12.7",
     "shopify-api-node": "^3.5.2",
+    "supertest": "^6.0.1",
     "swagger-jsdoc": "^5.0.1",
     "swagger-ui-express": "^4.1.4"
   },

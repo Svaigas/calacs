@@ -1,0 +1,10 @@
+{
+  "diff": true,
+  "extension": ["js"],
+  "package": "./package.json",
+  "reporter": "spec",
+  "require": ["./mocha.bootstrap.js"],
+  "slow": 75,
+  "timeout": 10000,
+  "ui": "bdd"
+}

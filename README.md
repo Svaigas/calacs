@@ -23,10 +23,11 @@ Swagger Docs:
 http://localhost:3000/api/v1/api-docs/
 ```
 
-## Tests
+### Tests
 
 ```
-$> npm test
+$> npm run test:e2e
+$> npm run test:unit
 ```
 
 ### Documentation
@@ -42,7 +43,12 @@ $> npm test
 | Shopify connection      | yes     |
 | Integration Diagram      | yes     |
 | Services to Shopify      | yes     |
-| Tests      | no     |
+| Tests      | yes     |
 | Swagger documentation      | yes     |
 | Joi Validator      | yes     |
-| Code documentation / jsdoc      | no     |
+| Code documentation / jsdoc      | yes     |
+
+### What is missing?
+* more e2e test, including mocking of external services.
+* introduce Dependency Injection, and put there Singleton Instances.
+* introduce authorization/login/authentication 
