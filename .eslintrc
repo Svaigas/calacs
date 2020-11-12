@@ -1,0 +1,109 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "plugins": [
+    "chai-friendly"
+  ],
+  "globals": {
+    "app": true,
+    "after": true,
+    "afterEach": true,
+    "assert": true,
+    "before": true,
+    "beforeEach": true,
+    "describe": true,
+    "expect": true,
+    "faker": true,
+    "it": true,
+    "request": true,
+    "should": true,
+    "sinon": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "implicit-arrow-linebreak": "off",
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": 0,
+    "consistent-return": "off",
+    "max-len": [
+      1,
+      {
+        "code": 160,
+        "tabWidth": 2
+      }
+    ],
+    "no-param-reassign": "off",
+    "no-console": 0,
+    "no-nested-ternary": "off",
+    "no-underscore-dangle": 0,
+    "no-await-in-loop": "off",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-use-before-define": 0,
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": {
+          "multiline": true,
+          "minProperties": 6
+        },
+        "ObjectPattern": {
+          "multiline": true,
+          "minProperties": 6
+        },
+        "ImportDeclaration": "never",
+        "ExportDeclaration": {
+          "multiline": true,
+          "minProperties": 6
+        }
+      }
+    ],
+    "object-property-newline": [
+      "error",
+      {
+        "allowMultiplePropertiesPerLine": false,
+        "allowAllPropertiesOnSameLine": true
+      }
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.unit-test.js",
+          "**/tests/**/*.js"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "server"
+        ]
+      }
+    }
+  }
+}

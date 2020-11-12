@@ -4,6 +4,8 @@
   "description": "Calacs shopify integration",
   "main": "bin/main.js",
   "scripts": {
+    "lint": "eslint \"./server/**/*.js\"",
+    "lint:fix": "eslint \"./server/**/*.js\" --fix",
     "start": "NODE_ICU_DATA=node_modules/full-icu node -r esm ./bin/main.js",
     "start:dev": "NODE_ICU_DATA=node_modules/full-icu nodemon -r esm ./bin/main.js",
     "test": "test"
@@ -29,6 +31,14 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "eslint": "^7.13.0"
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
   }
 }
