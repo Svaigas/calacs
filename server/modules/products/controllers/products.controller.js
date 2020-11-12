@@ -18,7 +18,7 @@ export default class ProductsController {
   static async create({ body }, res) {
     const product = await new ProductCreatorService().call(body);
 
-    res.json(new ProductSerializer(product).call());
+    res.status(StatusCodes.CREATED).json(new ProductSerializer(product).call());
   }
 
   static async doNothing(req, res) {
